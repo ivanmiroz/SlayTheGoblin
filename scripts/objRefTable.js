@@ -1,0 +1,73 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.TiledBg,
+		C3.Plugins.Mouse,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Sprite,
+		C3.Behaviors.EightDir,
+		C3.Behaviors.scrollto,
+		C3.Behaviors.bound,
+		C3.Behaviors.Bullet,
+		C3.Behaviors.destroy,
+		C3.Behaviors.Fade,
+		C3.Plugins.Text,
+		C3.Plugins.Audio,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.Sprite.Acts.SetTowardPosition,
+		C3.Plugins.Mouse.Exps.X,
+		C3.Plugins.Mouse.Exps.Y,
+		C3.Plugins.Mouse.Cnds.OnClick,
+		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.Sprite.Acts.SubInstanceVar,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Sprite.Acts.SetAngle,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.System.Exps.layoutwidth,
+		C3.Plugins.System.Exps.layoutheight
+	];
+};
+self.C3_JsPropNameTable = [
+	{TiledBackground: 0},
+	{Mouse: 0},
+	{Keyboard: 0},
+	{"8Direction": 0},
+	{ScrollTo: 0},
+	{BoundToLayout: 0},
+	{Player: 0},
+	{Health: 0},
+	{Bullet: 0},
+	{Goblin: 0},
+	{DestroyOutsideLayout: 0},
+	{Spell: 0},
+	{Fade: 0},
+	{SparkFlash: 0},
+	{Text: 0},
+	{Eye: 0},
+	{Audio: 0},
+	{Score: 0}
+];
+
+self.InstanceType = {
+	TiledBackground: class extends self.ITiledBackgroundInstance {},
+	Mouse: class extends self.IInstance {},
+	Keyboard: class extends self.IInstance {},
+	Player: class extends self.ISpriteInstance {},
+	Goblin: class extends self.ISpriteInstance {},
+	Spell: class extends self.ISpriteInstance {},
+	SparkFlash: class extends self.ISpriteInstance {},
+	Text: class extends self.ITextInstance {},
+	Eye: class extends self.ISpriteInstance {},
+	Audio: class extends self.IInstance {}
+}
